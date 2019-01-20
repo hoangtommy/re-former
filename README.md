@@ -1,24 +1,10 @@
-# README
+# Form Re-Former Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is part of The Odin's Project Rails Course.
 
-Things you may want to cover:
+## Reflection
+Areas for growth:
+* 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Positives
+* 
