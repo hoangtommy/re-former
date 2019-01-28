@@ -4,15 +4,29 @@
     </head>
     <body>
         <h1>Register for the site here</h1>
-        <form action='/users' method='post'>
-            Username: <input type='text' name='username'><br>
-            Email: <input type='text' name='email'><br>
-            Password: <input type='password' name='password'><br>
+        <%= form_tag("/users", method: "post") do %>
+            <%= label_tag(:username, "Username:") %>
+            <%= text_field_tag(:username) %>
+            <br>
+            <%= label_tag(:email, "Email:") %>
+            <%= text_field_tag(:email) %>
+            <br>
+            <%= label_tag(:password, "Password:")%>
+            <%= password_field_tag(:password) %>
+            <br>
+            <%= submit_tag("Join") %>
+        <% end %>
+        <!--
+        <form action='/users' method='post' accept-charset='UTF-8'>
+            <input type='hidden' name='authenticity_token' value="<%= form_authenticity_token %>">
+            <label for='username'>
+            Username: <input type='text' name='user[username]'><br>
+            <label for='email'>
+            Email: <input type='text' name='user[email]'><br>
+            <label for='password'>
+            Password: <input type='password' name='user[password]'><br>
+            <input type='submit' value='submit'>
         </form>
-
-        <h2>test    </h2>
-        <form>
-            <input type='text'>
-        </form>
+        -->
     </body>
 </html>
