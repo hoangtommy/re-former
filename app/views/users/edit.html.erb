@@ -3,7 +3,7 @@
     <head>
     </head>
     <body>
-        <h1>Register for the site here</h1>
+        <h1>Update your user account here</h1>
         <%= form_for @user do |f| %>
             <%= f.label :username %>
             <%= f.text_field :username %><br>
@@ -14,10 +14,6 @@
             <%= f.submit %>
         <% end %>
 
-        <% if @user.errors.size > 1 %>
-        <h4>Errors</h4>
-        <%= @user.errors.full_messages.join %>
-        <% end %>
         <!--
         <%= form_tag("/users", method: "post") do %>
             <%= label_tag(:username, "Username:") %>

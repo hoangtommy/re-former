@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
     def new
-        @user = User.new(username: "pretender", email: "pre@tender.com")
+        @user = User.new
     end
 
     def create
@@ -13,6 +13,19 @@ class UsersController < ApplicationController
             redirect_to new_user_path
         else
             render :new
+        end
+    end
+
+    def edit
+        @user = User.find_by(params[:id])
+    end
+
+    def update
+        @user = User.find_by(params[:id])
+        if @user.update(user_params)
+            redirect_to edit_user_path(@user)
+        else
+            render :edit
         end
     end
 
