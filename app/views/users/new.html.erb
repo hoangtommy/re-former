@@ -14,6 +14,10 @@
             <%= f.submit %>
         <% end %>
 
+        <% if @user.errors.size > 1 %>
+        <h4>Errors</h4>
+        <%= @user.errors.full_messages.join %>
+        <% end %>
         <!--
         <%= form_tag("/users", method: "post") do %>
             <%= label_tag(:username, "Username:") %>
